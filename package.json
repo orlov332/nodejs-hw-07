@@ -1,0 +1,33 @@
+{
+    "name": "nodejs-hw-07",
+    "version": "1.0.0",
+    "description": "Epam Mentoring Program homework",
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/orlov332/nodejs-hw-07.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "babel-node index.js",
+        "plain-text-server": "babel-node ./http-servers/plain-text-server.js",
+        "html-server": "babel-node ./http-servers/html-server.js",
+        "json-server": "babel-node ./http-servers/json-server.js",
+        "echo-server": "babel-node ./http-servers/echo-server.js"
+    },
+    "author": "Valeriy Orlov <valeriy_orlov@epam.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "latest",
+        "@babel/node": "latest",
+        "@babel/preset-env": "latest",
+        "@babel/preset-stage-2": "latest",
+        "eslint": "latest"
+    },
+    "dependencies": {
+        "cookie": "^0.3.1",
+        "express": "^4.16.4",
+        "lodash": "^4.17.11",
+        "stream-replace": "^1.0.0"
+    }
+}
