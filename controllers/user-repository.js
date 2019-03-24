@@ -1,4 +1,4 @@
-import userData from './user-data.json';
+import userData from '../data/users.json';
 
 export default class UserRepository {
 

@@ -1,4 +1,4 @@
-import productData from './product-data.json';
+import productData from '../data/products.json';
 import _ from 'lodash';
 
 export default class ProductRepository {

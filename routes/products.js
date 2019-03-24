@@ -1,5 +1,5 @@
 import express from 'express';
-import ProductRepository from '../models/product-repository';
+import ProductRepository from '../controllers/product-repository';
 
 const router = express.Router();
 const repository = new ProductRepository();

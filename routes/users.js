@@ -1,5 +1,5 @@
 import express from 'express';
-import UserRepository from '../models/user-repository';
+import UserRepository from '../controllers/user-repository';
 
 const router = express.Router();
 const repository = new UserRepository();

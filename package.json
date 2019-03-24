@@ -8,6 +8,7 @@
         "url": "https://github.com/orlov332/nodejs-hw-07.git"
     },
     "scripts": {
+        "init-mongo": "babel-node ./models/init-mongo.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "babel-node index.js",
         "plain-text-server": "babel-node ./http-servers/plain-text-server.js",
@@ -28,6 +29,7 @@
         "cookie": "^0.3.1",
         "express": "^4.16.4",
         "lodash": "^4.17.11",
+        "mongodb": "^3.2.2",
         "stream-replace": "^1.0.0"
     }
 }
