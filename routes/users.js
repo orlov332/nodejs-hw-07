@@ -1,14 +1,6 @@
-import express from 'express';
 import UserRepository from '../controllers/user-repository';
+import baseRouter from './base-router';
 
-const router = express.Router();
-const repository = new UserRepository();
-
-router.get('/users', (req, res) => {
-    repository.fetchAll()
-        .then((users) => {
-            res.status(200).json(users);
-        });
-});
+const router = baseRouter('/users', new UserRepository());
 
 export default router;

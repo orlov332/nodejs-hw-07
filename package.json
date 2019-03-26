@@ -8,13 +8,10 @@
         "url": "https://github.com/orlov332/nodejs-hw-07.git"
     },
     "scripts": {
-        "init-mongo": "babel-node ./models/init-mongo.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "babel-node index.js",
-        "plain-text-server": "babel-node ./http-servers/plain-text-server.js",
-        "html-server": "babel-node ./http-servers/html-server.js",
-        "json-server": "babel-node ./http-servers/json-server.js",
-        "echo-server": "babel-node ./http-servers/echo-server.js"
+        "cities-server": "babel-node http-servers/cities-server.js",
+        "init-mongo": "babel-node db/init-mongo.js"
     },
     "author": "Valeriy Orlov <valeriy_orlov@epam.com>",
     "license": "MIT",
@@ -30,6 +27,7 @@
         "express": "^4.16.4",
         "lodash": "^4.17.11",
         "mongodb": "^3.2.2",
+        "mongoose": "^5.4.20",
         "stream-replace": "^1.0.0"
     }
 }

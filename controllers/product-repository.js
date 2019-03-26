@@ -1,12 +1,10 @@
-import Repository from './repository';
+import Product from '../models/product';
+import ModelRepository from './model-repository';
 
-export default class ProductRepository extends Repository {
+export default class ProductRepository extends ModelRepository {
 
     constructor() {
-        super('products');
+        super(Product);
     }
 
-    async findById(id) {
-        return (await this.getCollection()).findOne({'id': id});
-    }
 }

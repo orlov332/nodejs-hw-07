@@ -1,7 +1,7 @@
 import mongoConnection from './mongo-connection';
-import userData from '../data/users.json';
-import productData from '../data/products.json';
-import cityData from '../data/cities.json';
+import userData from './data/users.json';
+import productData from './data/products.json';
+import cityData from './data/cities.json';
 
 (async function () {
 

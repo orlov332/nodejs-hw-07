@@ -1,4 +1,4 @@
-import mongoConnection from '../models/mongo-connection';
+import mongoConnection from '../db/mongo-connection';
 
 export default class Repository {
 
@@ -15,8 +15,8 @@ export default class Repository {
         return (await this.getCollection()).find({}).toArray();
     }
 
-    async save(product) {
-        return (await this.getCollection()).insertOne(product);
+    async save(obj) {
+        return (await this.getCollection()).insertOne(obj);
     }
 
 }
