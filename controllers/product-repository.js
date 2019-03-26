@@ -1,18 +1,12 @@
-import productData from '../data/products.json';
-import _ from 'lodash';
+import Repository from './repository';
 
-export default class ProductRepository {
+export default class ProductRepository extends Repository {
 
-    findById(id) {
-        return _.find(productData, {'id': id});
+    constructor() {
+        super('products');
     }
 
-    fetchAll() {
-        return productData;
-    }
-
-    save(product) {
-        productData.push(product);
-        return product;
+    async findById(id) {
+        return (await this.getCollection()).findOne({'id': id});
     }
 }

@@ -1,10 +1,18 @@
 import {MongoClient} from 'mongodb';
 import config from '../config/mongo';
 
-export default async function () {
-    const client = new MongoClient(config.url, {useNewUrlParser: true});
+let client = null;
 
-    await client.connect();
-    return client.db(config.dbName);
-
-}
+export default {
+    getDb: async function () {
+        if (client)
+            return client.db(config.dbName);
+        else {
+            client = await (new MongoClient(config.url, {useNewUrlParser: true})).connect();
+            return client.db(config.dbName);
+        }
+    },
+    close: function () {
+        if (client) client.close();
+    }
+};

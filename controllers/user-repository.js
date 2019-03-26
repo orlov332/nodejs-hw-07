@@ -1,8 +1,8 @@
-import userData from '../data/users.json';
+import Repository from './repository';
 
-export default class UserRepository {
+export default class UserRepository extends Repository {
 
-    fetchAll() {
-        return userData;
+    constructor() {
+        super('users');
     }
 }
