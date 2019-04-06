@@ -1,0 +1,57 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: 'Home Work 8'
+  description: 'Home Work 8'
+
+paths:
+  /products:
+    get:
+      description: Get all products
+      responses:
+        200:
+          description: Successfully returned a list of products
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: Uniqe identificator
+                name:
+                  type: string
+                  description: Name of product
+                brand:
+                  type: string
+                  description: Brand of product
+                price:
+                  type: number
+                  description: Price of product
+                reviews:
+                  type: array
+                  description: Review collection
+                  items:
+                    type: object
+                    properties:
+                      author:
+                        type: string
+                        description: Author of review
+                      review:
+                        type: string
+                        description: Review content
+                      lastModifiedDate:
+                        type: string
+                        description: Date of last modification
+
+ # Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+# basePath: /api/v1
+# schemes:
+#  - http
+# Added by API Auto Mocking Plugin
+schemes:
+  - https
+  - http
+# Added by API Auto Mocking Plugin
+basePath: /orlov3324/hw-8/1.0
